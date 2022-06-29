@@ -1,0 +1,34 @@
+$screenXL: 1920px;
+$screenLG: 1280px;
+$screenMD: 1024px;
+$screenSM: 768px;
+$screenXS: 375px;
+@mixin mediaQueryMin($screen) {
+  @media screen and (min-width: $screen) {
+    @content;
+  }
+}
+
+@mixin mediaQueryMax($screen) {
+  @media screen and (max-width: $screen) {
+    @content;
+  }
+}
+
+@mixin s-mobile() {
+  @media screen and (max-width: $screenSM) {
+    @content;
+  }
+}
+
+@mixin mobile() {
+  @media screen and (max-width: $screenMD) {
+    @content;
+  }
+}
+
+@mixin ipad() {
+  @media screen and (max-width: $screenLG) {
+    @content;
+  }
+}
